@@ -53,9 +53,7 @@ let template = [
   {
      label: 'View',
      submenu: [
-        {
-           role: 'toggledevtools'
-        },
+   
         {
            type: 'separator'
         },

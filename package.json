@@ -7,9 +7,9 @@
     "start": "electron .",
     "build": "electron-packager . Neutron",
     "pack": "electron-builder --dir",
-      "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/mac/icon.png --prune=true --out=release-builds",
-     "package-win": "electron-packager . neturon --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",    
-     "package-linux": "electron-packager .  Neutron --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/linux/512x512.png --prune=true --out=release-builds"
+    "dist": "electron-builder",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/mac/icon.png --prune=true --out=release-builds",
+    "package-linux": "electron-packager .  Neutron --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/linux/512x512.png --prune=true --out=release-builds"
   },
   "standard": {
     "ignore": [
@@ -23,10 +23,10 @@
   "license": "MIT",
   "devDependencies": {
     "asar": "^2.0.1",
-    "electron": "^6.0.12",
+    "electron": "^6.1.2",
     "electron-builder": "^21.2.0",
-    "electron-installer-debian": "^2.0.1",
     "electron-installer-snap": "^4.0.0",
+    "electron-installer-windows": "^2.0.0",
     "electron-packager": "^14.0.6"
   },
   "dependencies": {
@@ -57,14 +57,28 @@
       ],
       "icon": "assets/linux"
     },
-    "directories":{"buildResources":"assets"},
-    "files":["./assets/**"],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "./assets/**",
+      "./*",
+      "package.json",
+      "./main.js"
+    ],
     "win": {
-      "target": ["nsis"],
+      "target": [
+        "nsis"
+      ],
       "icon": "assets/win/icon.ico"
-      
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theuitown/electron-code-editor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theuitown/electron-code-editor/issues"
+  },
+  "homepage": "https://github.com/theuitown/electron-code-editor#readme"
 }
-
-
