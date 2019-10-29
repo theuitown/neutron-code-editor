@@ -8,8 +8,7 @@
     "build": "electron-packager . Neutron",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/mac/icon.png --prune=true --out=release-builds",
-    "package-linux": "electron-packager .  Neutron --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/linux/512x512.png --prune=true --out=release-builds"
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/mac/icon.png --prune=true --out=release-builds"
   },
   "standard": {
     "ignore": [
@@ -19,7 +18,7 @@
       "/languages"
     ]
   },
-  "author": "iamharsh.dev",
+  "author": "iamharsh.dev <electronlabsdev@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "asar": "^2.0.1",
