@@ -19,7 +19,7 @@ Neutron is  a live code editor built on web technologies for web developers basi
 ## INSTALLATION
 
 #### MacOS
-We don't do that here as of now. :sweat_smile:
+Download .DMG file [by clicking here](https://neutronweb-nm4y9kfht.now.sh/) and install it as normal application by dragging into application folder and enjoy coding. :sweat_smile:
 
 #### Windows
 Download .exe file [by clicking here](https://neutronweb-nm4y9kfht.now.sh/) and install it as normal apps.
